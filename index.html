@@ -8,29 +8,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>
+    <h1 id="title">
         Certification Registration Form
     </h1>
-    <p>
+    <p id="description">
         Please fill out all of the fields to register your name for our event. You will receive confirmation and details once your place is confirmed.
     </p>
-    <form action="registration-received.html" method="get">
+    <form action="registration-received.html" method="get" id="survey-form">
         <fieldset>
             <h2>REGISTRATION DETAILS</h2>
-            <label for="name-label">Full Name: <input id="name" type="text" required name="name" placeholder="Jane Doe"/></label>
-            <label for="email-label">E-mail:<input id="email" type="email" required name="email" placeholder="janedoe@email.com"/></label>
+            <label for="name-label" id="name-label">Full Name: <input id="name" type="text" required name="name" placeholder="Jane Doe"/></label>
+            <label for="email-label" id="email-label">E-mail:<input id="email" type="email" required name="email" placeholder="janedoe@email.com"/></label>
+            <label for="age" id="number-label">Age<input id="number" type="number" min="18" max="120" required name="sge" placeholder="Your age"/></label>
         </fieldset>
         <fieldset>
         <h2>TYPE OF ATTENDANCE</h2>
             Choose your preferred type of assistance to the event:
-            <label for="attendance-in-person"><input type="radio" name="attendance-type" id="attendance-in-person" class="inline">On Site</input></label>
-            <label for="attendance-online"><input type="radio" name="attendance-type" id="attendance-online" class="inline">Online</input></label>
+            <label for="attendance-in-person"><input type="radio" name="attendance-type" id="attendance-in-person" class="inline" value="1">On Site</input></label>
+            <label for="attendance-online"><input type="radio" name="attendance-type" id="attendance-online" class="inline" value="2">Online</input></label>
         </fieldset>
         <fieldset>
             <h2>EVENT DETAILS</h2>
-            <label for="age">CHoose how many days of the event would you like to attend:<input type="number" min="1" max="4" name="programs" placeholder="Choose number of days"/></label>
+            <label for="programs">Choose how many days of the event would you like to attend:<input type="number" min="1" max="4" id="number-label" name="programs" placeholder="Choose number of days"/></label>
             <label for="programs-choosen">Which of the themes of the event are you interested in?
-                <select id="programs-choosen" name="programs-choosen">
+                <select id="dropdown" name="programs-choosen">
                     <option value="">(select one)</option>
                     <option value="1">What food has to do with it? A integrative view on healthy eating and diets</option>
                     <option value="2">Fire and Low temperatures: mastering the art of cooking pioneers</option>
@@ -40,15 +41,15 @@
             </label>
         </fieldset>
         <fieldset>
-            <label for="subscribe-newsletter"><input type="checkbox" id="subscribe-newsletter" name="subscribe-newsletter" class="inline">I would like to receive email updates regarding future conferences</input></label>
-            <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions" name="terms-and-conditions" class="inline"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></input></label>
+            <label for="subscribe-newsletter"><input type="checkbox" id="subscribe-newsletter" name="subscribe-newsletter" class="inline" value="1">I would like to receive email updates regarding future conferences</input></label>
+            <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions" name="terms-and-conditions" class="inline" value="2"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></input></label>
         </fieldset>
-        <label for="bio">
+        <label for="question">
             Have a question? We're here to help.
-                <textarea rows="3" cols="30" id="bio" placeholder="Please write your question here" name="bio"></textarea>
+                <textarea rows="3" cols="30" id="question" placeholder="Please write your question here" name="question"></textarea>
         </label>
         </fieldset>
-        <input type="submit" value="Submit"/>
+        <input type="submit" id="submit" value="Submit"/>
     </form>
 
 </body>
