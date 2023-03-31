@@ -8,63 +8,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>
-    <!-- You should have a page title in an h1 element with an id of title -->
-    Certification Registration Form
-</h1>
-<p>
-    <!-- You should have a short explanation in a p element with an id of description -->
-    Please fill out all of the fields to register your name for our event. You will receive confirmation and details once your place is confirmed.
-</p>
-<form action="registration-received.html" method="post">
-<!-- You should have a form element with an id of survey-form -->
-    <fieldset>
-        <h2>EVENT DETAILS</h2>
-        <label for="age">How many programs of the event would you like to attend?:<input type="number" min="1" max="4" name="programs" placeholder="Choose number"/>
-            <!-- Inside the form, you can enter a number in an input field that has an id of number
-            The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
-            If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
-            For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
-            For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field-->
-        <label for="programs-choosen">Which programs of the event would you like to attend?
-            <!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from -->
-            <select id="programs-choosen" name="programs-choosen">
-                <option value="">(select one)</option>
-                <option value="1">What food has to do with it? A integrative view on healthy eating and diets</option>
-                <option value="2">Fire and Low temperatures: mastering the art of cooking pioneers</option>
-                <option value="3">Pastry, Baking and Chocolate: take on the gastronomic challenges of globalized consumer habits</option>
-                <option value="4">Business knowledge and culinary leadership: efficient and successful chefs with a vision</option>
-            </select>    
+    <h1>
+        Certification Registration Form
+    </h1>
+    <p>
+        Please fill out all of the fields to register your name for our event. You will receive confirmation and details once your place is confirmed.
+    </p>
+    <form action="registration-received.html" method="post">
+        <fieldset>
+            <h2>REGISTRATION DETAILS</h2>
+            <label for="name-label">Full Name: <input id="name" type="text" required name="name" placeholder="Jane Doe"/></label>
+            <label for="email-label">E-mail:<input id="email" type="email" required name="email" placeholder="janedoe@email.com"/></label>
+        </fieldset>
+        <fieldset>
+        <h2>TYPE OF ATTENDANCE</h2>
+            Choose your preferred type of assistance to the event:
+            <label for="attendance-in-person"><input type="radio" name="attendance-type" id="attendance-in-person" class="inline">On Site</input></label>
+            <label for="attendance-online"><input type="radio" name="attendance-type" id="attendance-online" class="inline">Online</input></label>
+        </fieldset>
+        <fieldset>
+            <h2>EVENT DETAILS</h2>
+            <label for="age">CHoose how many days of the event would you like to attend:<input type="number" min="1" max="4" name="programs" placeholder="Choose number of days"/></label>
+            <label for="programs-choosen">Which of the themes of the event are you interested in?
+                <select id="programs-choosen" name="programs-choosen">
+                    <option value="">(select one)</option>
+                    <option value="1">What food has to do with it? A integrative view on healthy eating and diets</option>
+                    <option value="2">Fire and Low temperatures: mastering the art of cooking pioneers</option>
+                    <option value="3">Pastry, Baking and Chocolate: take on the gastronomic challenges of globalized consumer habits</option>
+                    <option value="4">Business knowledge and culinary leadership: efficient and successful chefs with a vision</option>
+                </select>    
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="subscribe-newsletter"><input type="checkbox" required id="subscribe-newsletter" name="subscribe-newsletter" class="inline">I would like to receive email updates regarding future conferences</input></label>
+            <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions" name="terms-and-conditions" class="inline"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></input></label>
+        </fieldset>
+        <label for="bio">
+            Have a question? We're here to help.
+                <textarea rows="3" cols="30" id="bio" placeholder="Please write your question here" name="bio"></textarea>
         </label>
-    </fieldset>
-    <fieldset>
-        <h2>REGISTRATION DETAILS</h2>
-        <label for="name-label">Full Name: <input id="name" type="text" required name="name" placeholder="Jane Doe"/></label>
-        <label for="email-label">E-mail:<input id="email" type="email" required name="email" placeholder="janedoe@email.com"/></label>
-    </fieldset>  
-   
-    <fieldset>
-       <h2>TYPE OF ATTENDANCE</h2>
-        Choose your preferred type of assistance to the event:
-        <label for="attendance-in-person"><input type="radio" name="attendance-type" id="attendance-in-person" class="inline">In Person</input></label>
-        <label for="attendance-online"><input type="radio" name="attendance-type" id="attendance-online" class="inline">Online</input></label>
-    </fieldset>
-    <fieldset>
-        <label for="subscribe-newsletter"><input type="checkbox" required id="subscribe-newsletter" name="subscribe-newsletter" class="inline">I would like to receive email updates regarding future conferences</input></label>
-        <label for="terms-and-conditions"><input type="checkbox" required id="terms-and-conditions" name="terms-and-conditions" class="inline"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></input></label>
-    </fieldset>
-    <label for="bio">
-        Have a question? We're here to help.
-            <textarea rows="3" cols="30" id="bio" placeholder="Please write your question here" name="bio"></textarea>
-    </label>
-        <label>
-            <!-- Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
-        </label>
-    </fieldset>
-    <input type="submit" value="Submit"/>
-</form>
-
-
+        </fieldset>
+        <input type="submit" value="Submit"/>
+    </form>
 
 </body>
 </html>
