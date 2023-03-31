@@ -17,7 +17,9 @@
     Please fill out all of the fields to register your name for our event. You will receive confirmation and details once your place is confirmed.
 </p>
 <form action="registration-received.html" method="post">
+<!-- You should have a form element with an id of survey-form -->
     <fieldset>
+        <h2>EVENT DETAILS</h2>
         <label for="age">How many programs of the event would you like to attend?:<input type="number" min="1" max="4" name="programs" placeholder="Choose number"/>
             <!-- Inside the form, you can enter a number in an input field that has an id of number
             The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
@@ -25,17 +27,18 @@
             For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
             For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field-->
         <label for="programs-choosen">Which programs of the event would you like to attend?
+            <!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from -->
             <select id="programs-choosen" name="programs-choosen">
                 <option value="">(select one)</option>
                 <option value="1">What food has to do with it? A integrative view on healthy eating and diets</option>
                 <option value="2">Fire and Low temperatures: mastering the art of cooking pioneers</option>
                 <option value="3">Pastry, Baking and Chocolate: take on the gastronomic challenges of globalized consumer habits</option>
                 <option value="4">Business knowledge and culinary leadership: efficient and successful chefs with a vision</option>
-
-            </select>
-            <!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from -->
-            </label>
-        <!-- You should have a form element with an id of survey-form -->
+            </select>    
+        </label>
+    </fieldset>
+    <fieldset>
+        <h2>REGISTRATION DETAILS</h2>
         <label for="name-label">Full Name: <input id="name" type="text" required name="name" placeholder="Jane Doe"/>
             <!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
                 For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
@@ -47,14 +50,23 @@
             For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
              For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field-->
         </label>
+    </fieldset>  
+   
+    <fieldset>
+       <h2>TYPE OF ATTENDANCE</h2>
         Choose your preferred type of assistance to the event:
         <label for="attendance-in-person"><input type="radio" name="attendance-type" id="attendance-in-person" class="inline">In Person</input></label>
         <label for="attendance-online"><input type="radio" name="attendance-type" id="attendance-online" class="inline">Online</input></label>
             <!-- Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute -->
         </label>
+    </fieldset>
+    <fieldset>
+        <h2>REGISTRATION FEE</h2>
         <label>
+            
             <!-- Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute -->
         </label>
+    </fieldset>
         <label>
             <!-- Inside the form element, you are presented with a textarea for additional comments -->
         </label>
